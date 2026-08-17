@@ -15,7 +15,7 @@ export default function Login() {
 
   useEffect(function () {
     if (!localStorage.getItem("rise_user")) {
-      localStorage.setItem("rise_user", JSON.stringify({ name: "Demo Trader", email: "demo@rise.com", pass: "demo1234" }));
+      localStorage.setItem("rise_user", JSON.stringify({ name: "Demo Trader", email: "demo@rise.com", pass: "demo12345" }));
     }
   }, []);
 
@@ -104,9 +104,13 @@ export default function Login() {
                 <label htmlFor="reg-pass">Password</label>
                 <input id="reg-pass" type="password" value={regPass} onChange={(e) => setRegPass(e.target.value)} />
               </div>
+
+              
+              
               {regError && <p className="form-error" role="alert">{regError}</p>}
               <button type="submit" className="submit-btn">Create Account</button>
             </form>
+      
           )}
         </section>
       </main>
